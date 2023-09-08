@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Res.css">
+    <script src="Res.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+<div class="header">
+    <nav class="navbar">
+            <img src="logo.png" class="logo" alt="">
+        
+        <div class="searchbox">
+            <input type="search" placeholder="Search Here">
+            <button class="btn btn-danger">Search</button>
+        </div>
+        <div class="features">
+            <li>
+                <ul class="home" ><a href="">Home</a></ul>
+                <ul class="About"><a href="">About</a></ul>
+                <ul class="Services"><a href="">Services</a></ul>
+                <ul class="Contact Us"><a href="">Contact Us</a></ul>
+            </li>
+        </div>
+    </nav>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="musichead">
+             <div class="display-4">Let`s Play Music</div>
+            </div>
+            <div class="musiclist">
+                <div class="songs">
+                    <img src="resham.png" alt="">
+                        <span class="musictitle">Resham Resham</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song"></i>
+                </div>
+                <div class="songs">
+                    <img src="sadhi.png" alt="">
+                        <span class="musictitle">Sadhi Sadhi</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song1"></i>
+                </div>
+                <div class="songs" >
+                    <img src="phir.png" alt="">
+                        <span class="musictitle">Phir Phir</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song2"></i>
+                </div>
+                <div class="songs" >
+                    <img src="dhoka.png" alt="">
+                        <span class="musictitle">Dhoka Dhoka</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song3"></i>
+                </div>
+                <div class="songs" >
+                    <img src="jana.png" alt="">
+                        <span class="musictitle">Jana Jana</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song4"></i>
+                </div>
+                <div class="songs" >
+                    <img src="maan.png" alt="">
+                        <span class="musictitle">Maan Maan</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song5"></i>
+                </div>
+                <div class="songs" >
+                    <img src="pyaar.png" alt="">
+                        <span class="musictitle">Pyaar Pyaar</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song6"></i>
+                </div>
+                <div class="songs" >
+                    <img src="maan.png" alt="">
+                        <span class="musictitle">Maan Maan</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song7"></i>
+                </div>
+                <div class="songs" >
+                    <img src="resham.png" alt="">
+                        <span class="musictitle">Resham Resham</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song8"></i>
+                </div>
+                <div class="songs" >
+                    <img src="phir.png" alt="">
+                        <span class="musictitle">Phir Phir</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song9"></i>
+                </div>
+                <div class="songs" >
+                    <img src="pyaar.png" alt="">
+                        <span class="musictitle">Pyaar Pyaar</span>
+                        <span class="musicduration">5:38</span>
+                        <i class="fa-regular fa-circle-play" id="song10"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="musiccontroller">
+            <div class="dura">
+    <input type="range" id="bar" value="0"min="0" max="100">
+            </div>
+            <div class="icons">
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-circle-play" id="mPlay"></i>
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    startBtn=document.getElementById('mPlay');
+     startBtn.addEventListener('click', ()=> {
+   
+        if(audioElement.paused||audioElement.currentTime<=0){
+     audioElement.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+    }
+  });
+  bar=document.getElementById("bar")
+  audioElement.addEventListener('timeupdate' ,()=>{
+    pro=parseInt((audioElement.currentTime/audioElement.duration)*100);
+    bar.value=pro;
+});
+bar.addEventListener('change',()=>{
+    audioElement.currentTime=bar.value*audioElement.duration/100;
+});
+bar=document.getElementById("bar")
+  audioElement1.addEventListener('timeupdate' ,()=>{
+    pro=parseInt((audioElement1.currentTime/audioElement1.duration)*100);
+    bar.value=pro;
+});
+bar.addEventListener('change',()=>{
+    audioElement1.currentTime=bar.value*audioElement.duration/100;
+});
+bar=document.getElementById("bar")
+  audioElement2.addEventListener('timeupdate' ,()=>{
+    pro=parseInt((audioElement2.currentTime/audioElement2.duration)*100);
+    bar.value=pro;
+});
+bar.addEventListener('change',()=>{
+    audioElement2.currentTime=bar.value*audioElement.duration/100;
+});
+startBtn0=document.getElementById('song');
+     startBtn0.addEventListener('click', ()=> {
+   
+        if(audioElement.paused||audioElement.currentTime<=0){
+     audioElement.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn0.classList.remove('fa-circle-play');
+     startBtn0.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn0.classList.remove('fa-circle-pause');
+        startBtn0.classList.add('fa-circle-play');
+    }
+  });
+  startBtn2=document.getElementById('song2');
+     startBtn2.addEventListener('click', ()=> {
+   
+        if(audioElement2.paused||audioElement2.currentTime<=0){
+     audioElement2.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn2.classList.remove('fa-circle-play');
+     startBtn2.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement2.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn2.classList.remove('fa-circle-pause');
+        startBtn2.classList.add('fa-circle-play');
+    }
+  });
+  startBtn3=document.getElementById('song3');
+     startBtn3.addEventListener('click', ()=> {
+   
+        if(audioElement3.paused||audioElement3.currentTime<=0){
+     audioElement3.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn3.classList.remove('fa-circle-play');
+     startBtn3.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement3.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn3.classList.remove('fa-circle-pause');
+        startBtn3.classList.add('fa-circle-play');
+    }
+  });
+  startBtn4=document.getElementById('song4');
+     startBtn4.addEventListener('click', ()=> {
+   
+        if(audioElement4.paused||audioElement4.currentTime<=0){
+     audioElement4.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn4.classList.remove('fa-circle-play');
+     startBtn4.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement4.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn4.classList.remove('fa-circle-pause');
+        startBtn4.classList.add('fa-circle-play');
+    }
+  });
+  startBtn5=document.getElementById('song5');
+     startBtn5.addEventListener('click', ()=> {
+   
+        if(audioElement5.paused||audioElement5.currentTime<=0){
+     audioElement5.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn5.classList.remove('fa-circle-play');
+     startBtn5.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement5.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn5.classList.remove('fa-circle-pause');
+        startBtn5.classList.add('fa-circle-play');
+    }
+  });
+  startBtn6=document.getElementById('song6');
+     startBtn6.addEventListener('click', ()=> {
+   
+        if(audioElement6.paused||audioElement6.currentTime<=0){
+     audioElement6.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn6.classList.remove('fa-circle-play');
+     startBtn6.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement6.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn6.classList.remove('fa-circle-pause');
+        startBtn6.classList.add('fa-circle-play');
+    }
+  });
+  startBtn7=document.getElementById('song7');
+     startBtn7.addEventListener('click', ()=> {
+   
+        if(audioElement7.paused||audioElement7.currentTime<=0){
+     audioElement7.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtn7.classList.remove('fa-circle-play');
+     startBtn7.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement7.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtn7.classList.remove('fa-circle-pause');
+        startBtn7.classList.add('fa-circle-play');
+    }
+  });
+  startBtnt=document.getElementById('song1');
+     startBtnt.addEventListener('click', ()=> {
+   
+        if(audioElement1.paused||audioElement1.currentTime<=0){
+     audioElement1.play();
+     mPlay.classList.remove('fa-circle-play');
+     mPlay.classList.add('fa-circle-pause');
+     startBtnt.classList.remove('fa-circle-play');
+     startBtnt.classList.add('fa-circle-pause');
+
+    }
+    else{
+        audioElement1.pause();
+        mPlay.classList.remove('fa-circle-pause');
+        mPlay.classList.add('fa-circle-play');
+        startBtnt.classList.remove('fa-circle-pause');
+        startBtnt.classList.add('fa-circle-play');
+    }
+  });
+</script>
+</html>

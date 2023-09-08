@@ -1,0 +1,107 @@
+.navbar{
+    display: flex;
+}
+nav{
+    display: flex;
+    background-color: #212121;
+    border-radius: 0px 0px 30px 30px;
+}
+li{
+    list-style: none;
+    display: flex;
+    color: white;
+}
+.searchbox{
+width: 300px;
+display: flex;
+flex: 1;
+}
+input{
+    flex: 1;
+}
+.features{
+    margin-right: 20px;
+   margin-top: 10px;
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.home{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+ul a{
+
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px;
+    padding-top: 15px;
+}
+.container{
+    background-image: url('https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    border-radius: 30px;
+    transition: 6s ease all;
+    background-blend-mode:multiply;
+    opacity: 0.9;
+
+    }
+
+.musichead{
+    margin-left: 17px;
+    margin-bottom: 20px;
+}
+.songs{
+    margin-bottom: 30px;
+    background-color: rgb(255, 255, 255,0.1);
+    margin-right: 770PX;
+    justify-content: space-between;
+    color: beige;
+    border-radius: 150PX;
+    padding: 20PX 15px;
+}
+.musictitle{
+    padding: 50px;
+    
+}
+.musicduration{
+    padding: 50px;
+}
+.musiclist{
+    padding-bottom: 20px;
+    height: 750px;
+    overflow: scroll;
+    background-attachment: fixed;
+}
+.musiccontroller{
+    margin: 20px 10px;
+    text-align: center;
+   
+    background-color:rgb(255, 255, 255,0.2);
+    border-radius: 30px;
+}
+.dura{
+    display: flex;
+    flex: 1;
+   padding-top: 13px;
+}
+.icons{
+    font-size:x-large;
+}
+body{
+    background-image: url('https://images.unsplash.com/photo-1614680376593-902f74cf0d41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1548&q=80');
+}
+.songs img{
+    height: 50px;
+    width: 50px;
+    margin-top: 9px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
